@@ -21,13 +21,14 @@
 }
 html{
     font-size : 62.5%;
-    overflow: hidden;
+    /* overflow: hidden; */
     scroll-behavior: smooth;
     scroll-padding-top:7rem;
 }
 header{
     display: flex;
     position: fixed;
+    overflow: hidden;
     top:0;right:0;left:0;
     position: relative;
     align-items: center;
