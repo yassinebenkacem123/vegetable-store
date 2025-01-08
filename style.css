@@ -21,20 +21,20 @@
 }
 html{
     font-size : 62.5%;
-    overflow: hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top:7rem;
 }
 header{
     display: flex;
+    z-index:10000;
     position: fixed;
     top:0;right:0;left:0;
-    position: relative;
+    background-color: #ffff;
     align-items: center;
     justify-content: space-between;
     padding : 1.2rem 9%;
-    z-index: 100;
-    box-shadow: var(--box-shadow);
+    border-bottom: 4px solid #ff934f;
 }
 .logo{
     color : var(--black);
@@ -90,6 +90,7 @@ header{
     box-shadow: 0px 0px 2px rgba(0,0,0,.4);
     border-radius: .5rem;
     top:73px;; right:-440px;
+    background-color: #ffff;
     width:40rem;
     overflow: hidden;
     display: flex;
@@ -115,7 +116,7 @@ header{
 /* the shopping  cart : */
 .shopping-cart{
     position: absolute;
-    background-color: #ffffff;
+    background-color: #ffff;
     box-shadow: 0px 0px 1.2px rgba(0,0,0,.4);
     padding :1rem;
     display: flex;
@@ -157,13 +158,11 @@ header{
 
 }
 .shopping-cart .btn{
-    padding : .4rem;
-    width: 80%;
-    border-radius: 7px;
+    padding:.7rem;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
+    border: 1px solid #ff7800;
     color :var(--black);
-    background-color: #66666626;
 }
 
 .shopping-cart .btn:hover{
@@ -182,6 +181,7 @@ header{
     right :-260px;
     box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
     padding :1rem;
+    background-color: #ffff;
     display: flex;
     width:250px;
     border-radius: 10px;
@@ -244,6 +244,7 @@ header{
         height:200px;
         width:150px;
         justify-content: space-around;
+        background-color: #ffff;
         top:73px;;right:-150px;
         box-shadow: 0px 0px 2px rgba(0,0,0,.4);
         padding:1rem;        
@@ -262,4 +263,130 @@ header{
         right: 90px;
         transition: .2s linear;
     }
+  
+}
+
+@media (max-width:300px)
+{
+    .logo{
+        font-size: 1.1rem;
+    }
+    .icons div{
+        padding: .7rem;
+        font-size: 11px;
+        margin-left:10px;
+    }
+}
+/* *********************************************************************************************** */
+
+/* main or home section:  */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/main_section.jpg");
+    border-bottom: 2px solid #ff7800;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 5rem;
+}
+.home .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding:15rem;
+}
+.home .content h1{
+    font-size: 30px;
+    color:var(--black)
+}
+.home .content span{
+    color: var(--orange);
+}
+.home .content p{
+    margin-top:10px;
+    font-size: 1.1rem;;
+}
+.home .content .btn{
+    margin-top :20px;
+    padding:.7rem;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #ff7800;
+    color :var(--black);
+}
+.home .content .btn:hover{
+    background-color: var(--orange);
+    color:#ffff;
+}
+.heading {
+    text-align: center;
+    padding :3rem;
+    font-size: 2.7rem;
+    font-weight: 550;
+}
+.heading span{
+    background-color: var(--orange);
+    color : #ffff;
+    padding:1rem 3rem;
+    display: inline-block;
+    /* polygone:  <====== */ 
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%); 
+}
+
+/* our features boxes:  */
+.box-container{
+    display: grid;
+    gap:1rem;
+    padding:1rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    text-align: center;
+}
+.box-container .box{
+    border:2px solid rgb(255, 152, 112);
+    padding:.3rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .2);
+    text-align: center;
+}
+.box-container .box img{
+    width:200px;
+    height :200px;
+}
+.box-container .box .btn{
+    margin:.8rem;
+    padding:.7rem;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #ff7800;
+}
+.box-container .box .btn:hover{
+    background-color: var(--orange);
+    color:#ffff;
+}
+/* Media Queries :  */
+
+@media(max-width:750px)
+{
+    .home .content h1{
+        font-size: 20px;
+    }
+    .home .content p{
+        font-size: 8px;
+    }
+}
+  
+
+
+@media (max-width:300px)
+{
+    .home .content h1{
+        font-size: 15px;
+    }
+    .home .content p{
+        font-size:6px;
+    }
+
+
 }
