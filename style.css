@@ -312,13 +312,14 @@ header{
 .home .content .btn{
     margin-top :20px;
     padding:.7rem;
+    background-color: var(--orange);
     font-size: 15px;
     font-weight: 400;
     border: 1px solid #ff7800;
-    color :var(--black);
+    color :#ffff;
 }
 .home .content .btn:hover{
-    background-color: var(--orange);
+    background-color:  #ff934f;
     color:#ffff;
 }
 .heading {
@@ -358,12 +359,12 @@ header{
     margin:.8rem;
     padding:.7rem;
     font-size: 15px;
+    background-color: #ff7800;
+    color:#ffff;
     font-weight: 400;
-    border: 1px solid #ff7800;
 }
 .box-container .box .btn:hover{
-    background-color: var(--orange);
-    color:#ffff;
+    background-color: #ff934f;
 }
 /* Media Queries :  */
 
@@ -491,3 +492,5 @@ header{
 .buttons .btn:hover{
     background-color: #ff934f;
 }
+ 
+
