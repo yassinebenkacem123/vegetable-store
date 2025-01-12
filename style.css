@@ -403,36 +403,31 @@ header{
 }
 /* ********************************************************** */
 
-.wrapper{
+/* .wrapper{
     padding:1rem;
     width:400px;
     height:330px;
 
-}
+} */
 
 .wrapper .box:hover{
     transform: scale(1.01);
 }
 .wrapper .box{
-    margin-right:20px ;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
     display: flex;
     flex-direction: column;
-    height:100%;
-    width: 100%;
     align-items: center;
     background-color: #ffffff;
     outline: 1px solid #ff77006c;
     border:2px solid #ff7800;
     outline-offset: -.6rem;
-    padding: 1rem;
     margin-bottom: 10px;
    
 }
 .wrapper .box img{
     width:150Px;
     height:150px;
-    /* object-fit: cover; */
 
 }
 .wrapper .box .content{
