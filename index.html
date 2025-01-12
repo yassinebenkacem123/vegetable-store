@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- link from swiper : -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- font awsome link : -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- css file link :-->
@@ -94,7 +96,7 @@
             <div class="box">
                 <img src="images/fresh vegitables.png" alt="fresh vegitables and fruits">
                 <h1 class = "title">Freash and organic</h1>
-                <button class ="btn">Read more</button>
+                <button type = "button" class ="btn">Read more</button>
             </div>
             
             <div class="box">
@@ -110,6 +112,37 @@
             </div>
         </div>
     </secton>
+    <!-- the products section : -->
+    <section class="products" id = "products">
+        <h1 class ="heading">our <span>Products</span></h1>
+        <div class="buttons">
+            <button type = "button" class="btn" value="all">All</button>
+            <button type = "button" class="btn" value="vegetable">Vegetable</button>
+            <button type = "button" class="btn" value="fruit">Fruits</button>
+        </div>
+        <div class="wrapper-slider swiper mySwiper">
+            <div class="wrapper swiper-wrapper">
+                <div class="box swiper-slide">
+                    <img src="images/orange.png" alt="fresh-orange">
+                    <div class="content">
+                        <h1 class= "title">Fresh orange</h1>
+                        <p class = "price">$4.99</p>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button type = "button" class ="btn">Read more</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- link to js file:-->
     <script src = "main.js"></script>
 </body>
