@@ -403,12 +403,10 @@ header{
 }
 /* ********************************************************** */
 
-/* .wrapper{
+.wrapper{
     padding:1rem;
-    width:400px;
-    height:330px;
-
-} */
+    height:310px;
+}
 
 .wrapper .box:hover{
     transform: scale(1.01);
@@ -418,6 +416,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height:100%;
     background-color: #ffffff;
     outline: 1px solid #ff77006c;
     border:2px solid #ff7800;
@@ -457,7 +456,6 @@ header{
 .wrapper .box .stars{
     font-size: 15px;
     color:#ff934f;
-    margin:5px;
 }
 .wrapper .box .btn{
     background-color: var(--orange);
@@ -479,13 +477,16 @@ header{
 .buttons .btn{
     width:100px;
     margin-right:5px;
+    margin-bottom: 20px;
     padding:.5rem;
-    background-color: #ff7800;
-    color:#ffff;
+    background-color:#ffff;
+    color:#ff7800;
+    border: 2px solid #ff7800;
     border-radius: 10px;
 }
 .buttons .btn:hover{
     background-color: #ff934f;
+    color:#ffff;
 }
  
 
