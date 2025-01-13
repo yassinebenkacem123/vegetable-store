@@ -213,40 +213,13 @@ function displayProducts(array){
 }
 displayProducts(products);
 
-// swiper-slider part :
-var swiper = new Swiper(".mySwiper", {
-    loop:true,
-    spaceBetween: 13,
-    autoplay:{
-        delay:7000,
-        disableOnInteraction:false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1020: {
-        slidesPerView: 3,
-
-      },
-    },
-  });
-
-
 // filtering products :
+
 function displayFrutis()
 {
     let fruits = products.filter(product => product.category === "fruit");
     let htmlTable = fruits.map(fruit=>
-        `<div class="box swiper-slide">
+        `<div class="box swiper-slide"">
             <img src=${fruit.image}>
             <div class="content">
                 <h1 class= "title">${fruit.title}</h1>
@@ -290,10 +263,56 @@ function displayVegetables()
     wrapper.innerHTML = "";
     wrapper.innerHTML =  htmlTable;
 }
-buttons.forEach((button)=>{
-    button.addEventListener("click", (event)=>{
-        if(event.currentTarget.value === "all")displayProducts(products);
-        else if(event.currentTarget.value === "vegetable")displayVegetables();
-        else if(event.currentTarget.value === "fruit")displayFrutis();
+window.addEventListener("DOMContentLoaded",()=>{
+    buttons.forEach((button)=>{
+        button.addEventListener("click", (event)=>{
+            if(event.currentTarget.value === "all")displayProducts(products);
+            else if(event.currentTarget.value === "vegetable")displayVegetables();
+            else if(event.currentTarget.value === "fruit")displayFrutis();
+        });
     });
-});
+
+})
+
+
+var swiper = new Swiper(".mySwiper", {
+    loop:true,
+    spaceBetween: 10,
+    autoplay:{
+        delay:7000,
+        disableOnInteraction:false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView:1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+    },
+  });
+  
+// swiper-slider part :
+var swiper = new Swiper(".review-slider", {
+    loop:true,
+    spaceBetween: 10,
+    autoplay:{
+        delay:7000,
+        disableOnInteraction:false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView:1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+    },
+  });
+

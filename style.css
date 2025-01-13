@@ -405,38 +405,32 @@ header{
 
 .wrapper{
     padding:1rem;
-    height:310px;
-    width : 310px;
-    display: flex;
-    justify-content: center;
 }
-
+.wrapper .box{
+    width:290px;
+    background-color: #ffff;
+    border-radius: .5rem;
+    text-align: center;
+    padding:1rem;
+    height:280px;
+    margin-right: 10px;
+    border:2px solid #ff7800;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.4);
+    transition: .2s linear;
+}
 .wrapper .box:hover{
     transform: scale(1.01);
 }
-.wrapper .box{
-    margin-right :15px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height:100%;
-    background-color: #ffffff;
-    outline: 1px solid #ff77006c;
-    border:2px solid #ff7800;
-    outline-offset: -.6rem;
-    margin-bottom: 10px;
-   
-}
 .wrapper .box img{
-    width:150Px;
-    height:150px;
+    width:90Px;
+    height:90px;
 
 }
 .wrapper .box .content{
+    text-align: center;
     display: flex;
-    width:250px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .wrapper .box .content .title{
@@ -492,5 +486,238 @@ header{
     background-color: #ff934f;
     color:#ffff;
 }
- 
 
+/* *************** categories section ************** */
+#categroies{
+    padding:1rem;
+}
+.categories .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(24rem,1fr));
+    gap:10px;
+    padding:1rem;
+}
+.categories .container .box{
+    padding:1rem;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0,.4);
+    border: 2px solid #ff7800;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.categories .container .box:hover{
+    transform: scale(1.01);
+}
+.categories .container .box h3{
+    font-size: 20px;
+    color:var(--black);
+    margin: 6px;
+}
+.categories .container .box p{
+    color:var(--light-color);
+    font-size:14px;
+    font-weight: 440;
+}
+.categories .container .box .btn{
+    background-color: var(--orange);
+    border-radius: 20px;
+    font-size: 15px;
+    padding:1rem;
+    width:120px;
+    color:#ffff;
+    margin-top: 20px;
+}
+.categories .container .box .btn:hover{
+    background-color: #ff934f;
+}
+.categories .container .box img{
+    width:10rem;
+    height:10rem;
+}
+
+/*********************** review part: ********************/
+.reviews .review-slider{
+    padding:1rem;
+    display: flex;
+    justify-content: center;
+}
+.reviews .review-slider .box{
+    background-color:hwb(0 100% 0%);
+    border-radius: .5rem;
+    text-align: center;
+    padding:1rem;
+    height:200px;
+    border: 2px solid rgb(253, 130, 7);
+    transition: .2s linear;
+}
+
+.reviews .review-slider .box:hover{
+    transform: scale(1.01);
+}
+.reviews .review-slider .box img{
+    height: 50px;
+    width: 50px;
+    border:2px solid #ffffff;
+    margin-top:20px;
+    
+    border-radius: 50%;
+}
+
+.reviews .review-slider .box p{
+    color:#000000;
+    font-size:1rem;
+    margin: 4px;
+
+}
+.reviews .review-slider .box h3{
+    padding:1rem 0;
+    color:#ff7300;
+    font-size: 1.3rem;
+}
+.reviews .review-slider .box .stars{
+    font-size: 1rem;
+    color:#fc7600;
+}
+/************************ footer part : ******************************/
+.footer{
+    border-top: 3Px solid #ff934f; ;
+}
+.footer .parent{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(24rem,1fr));
+    gap:1.2rem;
+    padding:1rem;
+}
+.footer .parent .child{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.footer .parent .child h3{
+    font-size: 25px;
+    font-weight: 500;
+    color:var(--black);
+}
+.footer .parent .child h3 i{
+    color :var(--orange);
+    font-size:20px;
+    margin-left: 6px;
+}
+
+.footer .parent .child p{
+    line-height: 1.8;
+    font-size: 13px;
+    color:var(--light-color);
+    margin-bottom: 5px;
+}
+.footer .parent .child .social a{
+    background-color: #c5c5c54a;
+    color :#000000;
+    font-size: 13px;
+    padding: 1rem;
+    margin-right: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.footer .parent .child .social a:hover{
+    color:#ffff;
+    background-color: #ff7800;
+    transform: scale(1.01);
+}
+.footer .parent .child .contact{
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+}
+.footer .parent .child .contact a{
+    color:var(--light-color);
+    margin-bottom: .7rem;
+    display: flex;
+    font-size: 15px;
+}
+.footer .parent .child .contact a:hover{
+    transform: translateY(-2px);
+    color:#ff934f;
+}
+.footer .parent .child .contact a i{
+    color:#ff7800;
+    margin-right: 10px;
+
+}
+.footer .parent .child .web-parts{
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+}
+.footer .parent .child .web-parts a{
+    margin-bottom: .7rem;
+    display: flex;
+    align-items: center;
+    color:var(--light-color);
+    font-size: 15px;
+}
+.footer .parent .child .web-parts a:hover{
+    transform: translateX(-3px);
+    color:#ff934f;
+}
+.footer .parent .child .web-parts a i{
+    color:#ff7800;
+    margin-right: 10px;
+}
+.footer .parent .child .letter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer .parent .child .letter p{
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+    color:var(--light-color);
+}
+.footer .parent .child .letter input[type="email"]{
+    width: 100%;
+    padding:1rem;
+    background: #e3e2e1;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.footer .parent .child .letter input[type="submit"]{
+    padding:.3rem;
+    background-color: #d9d9d9;
+    width: 100px;
+    color:var(--black);
+    font-size: 15px;;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.footer .parent .child input[type="submit"]:hover{
+    background-color: #abaaaa;
+    color:#ffff;
+}
+.footer .parent .child input[type="email"]:focus{
+    box-shadow: 0px 0px 5px #ff934f;
+}
+
+.footer .parent .child .letter img{
+    height:40px;
+    width:200px;
+}
+
+/* last thing to do : */
+.credit{
+    font-size:15px;
+    text-align: center;
+    background-color: #ececec;
+    padding:1rem;
+    font-weight:550;
+    color:var(--light-color)
+}
+.credit span{
+    color:var(--orange);
+    font-size: 18px;
+    font-weight: 600;
+
+}
