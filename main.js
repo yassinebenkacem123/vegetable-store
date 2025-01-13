@@ -1,6 +1,6 @@
 //declaration of the variables:
 const buttons = document.querySelectorAll(".btn");
-const wrapper = document.querySelector(".wrapper");
+const wrapper = document.querySelector(".swiper-wrapper");
 //part for icons:
 function iconsActions()
 {
@@ -75,7 +75,20 @@ function iconsActions()
 }
 iconsActions();
 //part for boxes :
-let products = [{
+let products = [
+    {
+        id:0,
+        category:"fruit",
+        title:"fresh Orange",
+        image:"./images/orange.png",
+        price:4.99,
+        star1:"fas fa-star",
+        star2:"fas fa-star",
+        star3:"fas fa-star",
+        star4:"fas fa-star",
+        star5:"fas fa-star-halt-alt",
+    },
+    {
     id:1,
     category:"fruit",
     title:"fresh Apple",
@@ -187,6 +200,56 @@ let products = [{
 
 
 ];
+var swiper = new Swiper(".mySwiper", {
+    direction: 'horizontal',  // Horizontal direction
+    loop: true,
+    spaceBetween: 10,
+    autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+    },
+    speed:2300,
+    on: {
+        autoplayTimeLeft(swiper, time, progress) {
+            swiper.slidePrev();  // Slide to the previous slide
+        },
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1020: {
+            slidesPerView: 3,
+        },
+    },
+});
+function displayAll(){
+    
+    let htmlElement = products.map(product=>
+        `<div class="box swiper-slide">
+            <img src=${product.image}>
+            <div class="content">
+                <h1 class= "title">${product.title}</h1>
+                <p class = "price">$ ${product.price}</p>
+            </div>
+            <div class="stars">
+                <i class="${product.star1}"></i>
+                <i class="${product.star2}"></i>
+                <i class="${product.star3}"></i>
+                <i class="${product.star4}"></i>
+                <i class="${product.star5}"></i>
+             </div>
+            <button type = "button" class ="btn">Read more</button>
+        </div>`
+    );
+    htmlElement = htmlElement.join("");
+    wrapper.innerHTML = "";
+    wrapper.innerHTML = htmlElement;
+
+}
 //display products :
 function displayProducts(array){
     
@@ -219,7 +282,7 @@ function displayFrutis()
 {
     let fruits = products.filter(product => product.category === "fruit");
     let htmlTable = fruits.map(fruit=>
-        `<div class="box swiper-slide"">
+        `<div class="box swiper-slide">
             <img src=${fruit.image}>
             <div class="content">
                 <h1 class= "title">${fruit.title}</h1>
@@ -238,6 +301,7 @@ function displayFrutis()
     htmlTable = htmlTable.join("");
     wrapper.innerHTML = "";
     wrapper.innerHTML =  htmlTable;
+
 }
 function displayVegetables()
 {
@@ -262,39 +326,21 @@ function displayVegetables()
     htmlTable = htmlTable.join("");
     wrapper.innerHTML = "";
     wrapper.innerHTML =  htmlTable;
+
 }
-window.addEventListener("DOMContentLoaded",()=>{
+
     buttons.forEach((button)=>{
         button.addEventListener("click", (event)=>{
-            if(event.currentTarget.value === "all")displayProducts(products);
+            if(event.currentTarget.value === "all")displayAll();
             else if(event.currentTarget.value === "vegetable")displayVegetables();
             else if(event.currentTarget.value === "fruit")displayFrutis();
         });
     });
 
-})
 
 
-var swiper = new Swiper(".mySwiper", {
-    loop:true,
-    spaceBetween: 10,
-    autoplay:{
-        delay:7000,
-        disableOnInteraction:false,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView:1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1020: {
-        slidesPerView: 3,
-      },
-    },
-  });
-  
+
+
 // swiper-slider part :
 var swiper = new Swiper(".review-slider", {
     loop:true,
