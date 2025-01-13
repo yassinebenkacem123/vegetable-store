@@ -296,4 +296,4 @@ buttons.forEach((button)=>{
         else if(event.currentTarget.value === "vegetable")displayVegetables();
         else if(event.currentTarget.value === "fruit")displayFrutis();
     });
-})
+});
